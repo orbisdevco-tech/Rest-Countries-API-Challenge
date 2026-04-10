@@ -13,8 +13,11 @@ export const router = {
   setup: () => {
     router.root = document.querySelector("main");
     const links = Array.from(document.querySelectorAll("a"));
+    console.log("I'm going to alter following links: ", links);
     const handleLinkClick = (self) => (e) => {
       e.preventDefault();
+      console.log("prevented default");
+
       router.go(self.href);
     };
     links.forEach((link) => {

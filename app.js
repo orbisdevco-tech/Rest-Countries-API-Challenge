@@ -45,6 +45,16 @@ window.app = {
 window.addEventListener("DOMContentLoaded", () => {
   handleThemeToggle();
   router.init();
+
+  const observer = new MutationObserver(() => {
+    router.setup();
+  });
+
+  observer.observe(document.body, {
+    childList: true, // add/remove elements
+    subtree: true, // watch deep changes
+    attributes: true, // attribute changes
+  });
 });
 
 registerComponents();
