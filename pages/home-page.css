@@ -33,31 +33,7 @@
 .country-cards {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
   margin-top: var(--space-600);
   gap: var(--space-900);
-}
-
-@media (width <= 1250px) {
-  .country-cards {
-    gap: var(--space-600);
-  }
-}
-
-@media (width <= 1150px) {
-  .country-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (width <= 900px) {
-  .country-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width <= 600px) {
-  .country-cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
