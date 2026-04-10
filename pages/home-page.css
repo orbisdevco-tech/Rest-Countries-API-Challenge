@@ -11,7 +11,6 @@
   position: relative;
   background-color: var(--color-card-bg);
   border-radius: 0.25rem;
-  width: 100%;
 }
 
 .nav__search-container i {
@@ -60,6 +59,9 @@
     height: 44px;
   }
 
+  .nav__search-container {
+    width: 100%;
+  }
   .country-cards {
     gap: var(--space-300);
   }
