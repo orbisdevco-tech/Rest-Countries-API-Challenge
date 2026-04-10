@@ -1,3 +1,5 @@
+import { slugify } from "../services/utils.js";
+
 export class CountryCard extends HTMLElement {
   constructor() {
     super();
@@ -11,11 +13,14 @@ export class CountryCard extends HTMLElement {
   }
 
   render() {
+    const anchor = this.querySelector("a");
     const img = this.querySelector("img");
     const heading = this.querySelector("h2");
     const dataTableRef = this.querySelector(".country-card__data");
 
     const data = JSON.parse(this.dataset.data);
+
+    anchor.href = `/country/${slugify(data.name)}`;
     img.src = data.flags.svg;
     heading.textContent = data.name;
 

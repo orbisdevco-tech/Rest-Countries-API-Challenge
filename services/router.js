@@ -46,18 +46,15 @@ export const router = {
         document.body.dataset.page = "home";
         pageNode = document.createElement("home-page");
         break;
-      case "/result":
-        pageNode = document.createElement("result-page");
-        break;
       default:
         if (
           typeof normalizedPath === "string" &&
-          normalizedPath.startsWith("/quiz")
+          normalizedPath.startsWith("/country")
         ) {
           document.body.dataset.page = "quiz";
-          const quizId = url.substring(url.lastIndexOf("/") + 1);
-          pageNode = document.createElement("quiz-page");
-          pageNode.dataset.id = quizId;
+          const countryId = url.substring(url.lastIndexOf("/") + 1);
+          pageNode = document.createElement("country-page");
+          pageNode.dataset.id = countryId;
         }
     }
 

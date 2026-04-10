@@ -8,6 +8,7 @@
 .country-card img {
   height: 160px;
   object-fit: cover;
+  width: 100%;
 }
 
 .country-card__content {

@@ -12,9 +12,14 @@
       rel="stylesheet"
     />
 
+    <!-- global CSS -->
     <link rel="stylesheet" href="/global.css" />
-    <link rel="stylesheet" href="/pages/home-page.css" />
+    <!-- components CSS -->
     <link rel="stylesheet" href="/components/country-card.css" />
+
+    <!-- pages CSS -->
+    <link rel="stylesheet" href="/pages/home-page.css" />
+    <link rel="stylesheet" href="/pages/country-page.css" />
 
     <script
       src="https://kit.fontawesome.com/05ce772781.js"
@@ -38,6 +43,29 @@
       <!-- dynamically render -->
     </main>
 
+    <template id="country-page-template">
+      <nav>
+        <button class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+      </nav>
+      <article>
+        <div>
+          <img src="" alt="" />
+        </div>
+        <section>
+          <h2>Belgium</h2>
+
+          <div>
+            <dd></dd>
+            <dd></dd>
+          </div>
+
+          <div></div>
+        </section>
+      </article>
+    </template>
+
     <template id="home-page-template">
       <nav class="nav">
         <div class="nav__search-container">
@@ -51,12 +79,14 @@
 
     <template id="country-card-template">
       <li class="country-card">
-        <img src="https://flagcdn.com/af.svg" alt="" />
+        <a href="/country">
+          <img src="https://flagcdn.com/af.svg" alt="" />
 
-        <div class="country-card__content">
-          <h2>Afghanistan</h2>
-          <table class="country-card__data"></table>
-        </div>
+          <div class="country-card__content">
+            <h2>Afghanistan</h2>
+            <table class="country-card__data"></table>
+          </div>
+        </a>
       </li>
     </template>
 
