@@ -1,9 +1,11 @@
 import { CountryCard } from "./components/country-card.js";
+import { CustomSelect } from "./components/custom-select.js";
 import { CountryPage } from "./pages/country-page.js";
 import { HomePage } from "./pages/home-page.js";
 import { router } from "./services/router.js";
 
 function registerComponents() {
+  customElements.define("custom-select", CustomSelect);
   customElements.define("country-card", CountryCard);
   customElements.define("home-page", HomePage);
   customElements.define("country-page", CountryPage);

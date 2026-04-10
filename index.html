@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/global.css" />
     <!-- components CSS -->
     <link rel="stylesheet" href="/components/country-card.css" />
+    <link rel="stylesheet" href="/components/custom-select.css" />
 
     <!-- pages CSS -->
     <link rel="stylesheet" href="/pages/home-page.css" />
@@ -43,6 +44,25 @@
     <main class="main-container">
       <!-- dynamically render -->
     </main>
+
+    <template id="home-page-template">
+      <nav class="nav">
+        <div class="nav__search-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="nav__search" placeholder="Search for a Country..." />
+        </div>
+
+        <custom-select data-placeholder="Filter by Region">
+          <li tabindex="0" value="africa">Africa</li>
+          <li tabindex="0" value="america">America</li>
+          <li tabindex="0" value="asia">Asia</li>
+          <li tabindex="0" value="europe">Europe</li>
+          <li tabindex="0" value="oceania">Oceania</li>
+        </custom-select>
+      </nav>
+
+      <ul class="country-cards"></ul>
+    </template>
 
     <template id="country-page-template">
       <nav class="country-page__nav">
@@ -100,17 +120,6 @@
       </article>
     </template>
 
-    <template id="home-page-template">
-      <nav class="nav">
-        <div class="nav__search-container">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input class="nav__search" placeholder="Search for a Country..." />
-        </div>
-      </nav>
-
-      <ul class="country-cards"></ul>
-    </template>
-
     <template id="country-card-template">
       <li class="country-card">
         <a href="/country">
@@ -122,6 +131,19 @@
           </div>
         </a>
       </li>
+    </template>
+
+    <template id="custom-select-template">
+      <div class="select">
+        <button class="select__btn">
+          <span></span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <ul class="select_options hidden">
+          <slot></slot>
+        </ul>
+      </div>
     </template>
 
     <script src="/app.js" type="module"></script>

@@ -8,6 +8,7 @@
   display: flex;
   position: relative;
   background-color: var(--color-card-bg);
+  border-radius: 0.25rem;
 }
 
 .nav__search-container i {
@@ -29,6 +30,7 @@
   background-color: var(--color-card-bg);
   color: var(--color-muted);
   box-shadow: 0px 0px 7px var(--color-shadow);
+  border-radius: 0.25rem;
 }
 
 .nav__search::placeholder {

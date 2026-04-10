@@ -1,0 +1,47 @@
+.select {
+  position: relative;
+}
+
+.select__btn {
+  height: 56px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-300);
+  align-items: center;
+  background-color: var(--color-card-bg);
+  padding: 0rem var(--space-600);
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.select_options {
+  position: absolute;
+  background-color: var(--color-card-bg);
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  padding: var(--space-200) var(--space-300);
+}
+
+.hidden {
+  display: none;
+}
+
+.select_options li {
+  padding: 0.15rem;
+  opacity: 0.8;
+}
+
+.select_options li:hover {
+  cursor: pointer;
+  outline: 1px solid var(--color-foreground);
+  border-radius: 0.25rem;
+}
+
+.select_options li[data-selected="true"] {
+  opacity: 1;
+}
