@@ -31,5 +31,43 @@ export class CountryPage extends HTMLElement {
     const img = this.querySelector("img");
 
     img.src = this.country.flags.svg;
+    this.querySelectorAll("[data-key]").forEach((ele) => {
+      const key = ele.dataset.key;
+      const content = this.resolveData(key);
+      ele.textContent = content;
+    });
+
+    const borderCountries = document.createDocumentFragment();
+
+    (this.country.borders ?? ["None"]).forEach((border) => {
+      const li = document.createElement("li");
+      li.classList.add("badge");
+      li.textContent = border;
+      borderCountries.appendChild(li);
+    });
+
+    const borderCountriesListEle = this.querySelector(
+      ".country-page__borders-data ul",
+    );
+    borderCountriesListEle.innerHTML = "";
+
+    borderCountriesListEle.appendChild(borderCountries);
+  }
+
+  resolveData(key) {
+    const data = this.country[key];
+
+    if (key === "currencies") {
+      return data.map((c) => c.name).join(", ");
+    }
+
+    if (key === "languages") {
+      return data.map((l) => l.name).join(", ");
+    }
+
+    if (typeof data === "object" && Array.isArray(data)) {
+      return data.join(", ");
+    }
+    return data;
   }
 }

@@ -44,24 +44,57 @@
     </main>
 
     <template id="country-page-template">
-      <nav>
-        <button class="back-btn">
+      <nav class="country-page__nav">
+        <a href="/" class="back-btn">
           <i class="fa-solid fa-arrow-left"></i> Back
-        </button>
+        </a>
       </nav>
       <article>
         <div>
           <img src="" alt="" />
         </div>
         <section>
-          <h2>Belgium</h2>
+          <h2 data-key="name">Belgium</h2>
 
-          <div>
-            <dd></dd>
-            <dd></dd>
+          <div class="country-page__data-container">
+            <dl>
+              <div class="inline-flex">
+                <dt>Native Name:</dt>
+                <dd data-key="nativeName"></dd>
+              </div>
+              <div class="inline-flex">
+                <dt>Population:</dt>
+                <dd data-key="population"></dd>
+              </div>
+              <div class="inline-flex">
+                <dt>Sub Region:</dt>
+                <dd data-key="subregion"></dd>
+              </div>
+              <div class="inline-flex">
+                <dt>Capital:</dt>
+                <dd data-key="capital"></dd>
+              </div>
+            </dl>
+            <dl>
+              <div class="inline-flex">
+                <dt>Top Level Domain:</dt>
+                <dd data-key="topLevelDomain"></dd>
+              </div>
+              <div class="inline-flex">
+                <dt>Currencies:</dt>
+                <dd data-key="currencies"></dd>
+              </div>
+              <div class="inline-flex">
+                <dt>Languages:</dt>
+                <dd data-key="languages"></dd>
+              </div>
+            </dl>
           </div>
 
-          <div></div>
+          <div class="country-page__borders-data">
+            <span class="">Border Countries: </span>
+            <ul></ul>
+          </div>
         </section>
       </article>
     </template>

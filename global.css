@@ -27,6 +27,8 @@
   --color-foreground: var(--color-grey-950);
   --color-card-bg: var(--color-white);
   --color-muted: var(--color-grey-400);
+  --color-shadow: hsla(0, 0%, 0%, 0.1);
+  --color-shadow-light: hsla(0, 0%, 0%, 0.05);
 }
 
 * {
@@ -50,6 +52,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 button,
 input,
 textarea,
@@ -64,8 +70,9 @@ body {
 
 .header {
   width: 100%;
-  box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.05);
+  box-shadow: 0px 2px 4px var(--color-shadow-light);
   margin-bottom: var(--space-600);
+  padding: 0rem 1rem;
 }
 
 .header__container {
@@ -91,6 +98,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   padding: var(--space-100);
+  box-shadow: 0px 0px 4px var(--color-shadow);
 }
 
 .header__theme-btn:focus {
@@ -104,4 +112,11 @@ body {
 .main-container {
   max-width: 1250px;
   margin: 0 auto;
+  padding: 0rem 1rem;
+}
+
+@media (width<600px) {
+  .header__container h1 {
+    font-size: 1rem;
+  }
 }
