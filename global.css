@@ -3,7 +3,7 @@
   --color-white: hsl(0, 100%, 100%);
   --color-black: hsl(0, 0%, 0%);
   --color-grey-950: hsl(200, 15%, 8%);
-  --color-grey-400: hsl(200, 15%, 8%);
+  --color-grey-400: hsl(0, 0%, 50%);
   --color-grey-350: hsl(0, 0%, 59%);
   --color-grey-300: hsl(0, 0%, 70%);
   --color-grey-250: hsl(0, 0%, 77%);
@@ -25,6 +25,8 @@
   /* design tokens */
   --color-bg: var(--color-grey-50);
   --color-foreground: var(--color-grey-950);
+  --color-card-bg: var(--color-white);
+  --color-muted: var(--color-grey-400);
 }
 
 * {
@@ -35,6 +37,11 @@
 
 html {
   font-family: "Nunito Sans", sans-serif;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
 }
 
 button,
@@ -62,7 +69,7 @@ body {
   height: 80px;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-white);
+  background-color: var(--color-card-bg);
 }
 
 .header__container h1 {
@@ -86,4 +93,41 @@ body {
 
 .header__theme-btn:focus-visible {
   outline: 1px solid var(--color-foreground);
+}
+
+.main-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card-bg);
+  box-shadow: 0px 0px 7px hsla(0, 0%, 0%, 0.05);
+}
+
+.country-card img {
+  object-fit: cover;
+}
+
+.country-card__content {
+  padding: var(--space-300) var(--space-300) var(--space-300) var(--space-600);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+}
+
+.country-card__content h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.country-card__data {
+  font-size: 0.9rem;
+}
+
+.country-card td {
+  text-align: left;
 }

@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__search-container {
+  display: flex;
+  position: relative;
+  background-color: var(--color-card-bg);
+}
+
+.nav__search-container i {
+  display: flex;
+  position: absolute;
+  left: var(--space-300);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--color-muted);
+}
+
+.nav__search {
+  height: 56px;
+  padding: 0rem var(--space-400);
+  padding-left: var(--space-700);
+  border: none;
+  color: var(--color-muted);
+}
+
+.country-cards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: var(--space-600);
+  gap: var(--space-900);
+}
