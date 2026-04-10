@@ -31,6 +31,7 @@ export class CountryPage extends HTMLElement {
     const img = this.querySelector("img");
 
     img.src = this.country.flags.svg;
+    img.alt = `${this.country.name} flag`;
     this.querySelectorAll("[data-key]").forEach((ele) => {
       const key = ele.dataset.key;
       const content = this.resolveData(key);

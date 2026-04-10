@@ -22,6 +22,7 @@ export class CountryCard extends HTMLElement {
 
     anchor.href = `/country/${slugify(data.name)}`;
     img.src = data.flags.svg;
+    img.alt = `${data.name} flag`;
     heading.textContent = data.name;
 
     const tableData = {
